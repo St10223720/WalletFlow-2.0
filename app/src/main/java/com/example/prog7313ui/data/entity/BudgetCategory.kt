@@ -19,4 +19,9 @@ data class BudgetCategory(
     val name: String, // Name of the category, e.g., 'Food', 'Transport', etc.
     val minLimit: Double = 0.0, // The minimum amount the user aims to spend monthly in this category. Default is 0.
     val maxLimit: Double = 0.0 // The maximum amount the user aims to spend monthly in this category. Default is 0.
-)
+){
+    override fun toString(): String {
+        return "$id. $name" // Return a string representation of the category for display in the spinner
+    }
+}
+
